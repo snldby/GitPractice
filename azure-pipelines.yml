@@ -1,4 +1,4 @@
-pool: AgentKaJhund
+pool: MyNewAgent
 trigger: none
 steps:
 - task: TerraformTask@5
