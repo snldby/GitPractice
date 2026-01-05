@@ -1,3 +1,12 @@
-pool: "AgentKaJhund"
+pool: AgentKaJhund
 trigger: none
 steps:
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'NewServCon'
+    backendAzureRmResourceGroupName: 'storage-rg'
+    backendAzureRmStorageAccountName: 'stg001212'
+    backendAzureRmContainerName: 'tfstate'
+    backendAzureRmKey: 'terraform.tfstate'
